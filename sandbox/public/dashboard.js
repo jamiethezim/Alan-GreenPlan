@@ -1,7 +1,7 @@
 var $ = document.getElementById.bind(document);
 
 var serverResponseHandler = function(res){
-        console.log("getting ", res);
+        console.log("getting " + res);
         if (res === "ok"){
                 window.location.replace("http://127.0.0.1:8081/dashboard.html")
         }

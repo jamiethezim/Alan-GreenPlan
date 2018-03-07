@@ -7,12 +7,15 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.get('/', function(req, res) {
+        console.log("got request" + req)
+})
 
 app.post('/login', function (req, res) {
   // check if response in db
   // if so, send along to dashboard
   // if not, tell them bad login and redirect to this route
-  //res.sendFile(__dirname + "/public/" + "dashboard.html");
+  res.sendFile(__dirname + "/public/" + "dashboard.html");
   res.send("ok");
 })
 
